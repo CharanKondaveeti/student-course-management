@@ -5,4 +5,5 @@ const enrollmentSchema = new mongoose.Schema({
   course: { type: mongoose.Schema.Types.ObjectId, ref: "courseModel" },
 });
 
-module.exports = mongoose.model("Enrollment", enrollmentSchema);
+const Enrollment = mongoose.model("Enrollment", enrollmentSchema);
+module.exports = Enrollment;

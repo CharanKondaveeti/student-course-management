@@ -1,8 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const Course = require("../models/courseModel");
+const courseControllers = require("../controllers/courseControllers");
 
-// Implement CRUD routes for courses
-// ...
+router
+  .route("/")
+  .get(courseControllers.getAllCourse)
+  .post(courseControllers.createCourse);
+
+router
+  .route("/:tittle")
+  .get(courseControllers.getCourse)
+  .patch(courseControllers.updateCourse)
+  .delete(courseControllers.deleteCourse);
 
 module.exports = router;

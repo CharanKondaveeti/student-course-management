@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Enrollment = require("../models/enrollmentModel");
+const enrollmentController = require("../controllers/enrollmentController");
 
-// Implement an enrollment route for students to enroll in courses
-// ...
+router.route("/enroll").post(enrollmentController.studentEnroll);
 
 module.exports = router;
