@@ -65,8 +65,5 @@ Before getting started, make sure you have the following prerequisites installed
 ## Error Handling
 - Proper error handling is implemented in the routes for invalid requests and database errors.
 
-## Assumptions and Considerations
-- Include any assumptions or special considerations you made during the implementation here.
-
 ## Conclusion
 In this repository, we have outlined how to set up and use the Node.js/Express application with MongoDB for managing students, courses, and enrollments.
