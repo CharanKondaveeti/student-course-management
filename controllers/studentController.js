@@ -21,8 +21,8 @@ exports.getAllStudents = async (req, res) => {
 
 exports.getStudent = async (req, res) => {
   try {
-    const studentName = req.params.name;
-    const student = await Student.findOne({ name: studentName });
+    const studentid = req.params.id;
+    const student = await Student.findOne({ id: studentid });
 
     res.status(200).json({
       status: "success",
@@ -58,9 +58,9 @@ exports.createStudent = async (req, res) => {
 
 exports.updateStudent = async (req, res) => {
   try {
-    const studentName = req.params.name;
+    const studentid = req.params.id;
     const student = await Student.findOneAndUpdate(
-      { name: studentName },
+      { id: studentid },
       req.body,
       {
         new: true,
@@ -84,8 +84,8 @@ exports.updateStudent = async (req, res) => {
 
 exports.deleteStudent = async (req, res) => {
   try {
-    const studentName = req.params.name;
-    await Student.findOneAndDelete(studentName);
+    const studentid = req.params.id;
+    await Student.findOneAndDelete(studentid);
 
     res.status(204).json({
       status: "success",

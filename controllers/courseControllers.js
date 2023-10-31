@@ -21,8 +21,8 @@ exports.getAllCourse = async (req, res) => {
 
 exports.getCourse = async (req, res) => {
   try {
-    const courseTitle = req.params.title;
-    const course = await Course.findOne({ title: courseTitle });
+    const courseid = req.params.id;
+    const course = await Course.findOne({ id: courseid });
 
     res.status(200).json({
       status: "success",
@@ -58,9 +58,9 @@ exports.createCourse = async (req, res) => {
 
 exports.updateCourse = async (req, res) => {
   try {
-    const courseTitle = req.params.title;
+    const courseid = req.params.id;
     const course = await Course.findOneAndUpdate(
-      { title: courseTitle },
+      { id: courseid },
       req.body,
       {
         new: true,
@@ -84,8 +84,8 @@ exports.updateCourse = async (req, res) => {
 
 exports.deleteCourse = async (req, res) => {
   try {
-    const courseTitle = req.params.title;
-    await Course.findOneAndDelete(courseTitle);
+    const courseid = req.params.id;
+    await Course.findOneAndDelete(courseid);
 
     res.status(204).json({
       status: "success",
