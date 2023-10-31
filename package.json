@@ -1,7 +1,7 @@
 {
   "name": "student-course-management",
   "version": "1.0.0",
-  "description": "This is a node-express and MongoDB application to managame student's enrollment data",
+  "description": "This is a node-express and MongoDB application to managae student's enrollment data",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"

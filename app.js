@@ -9,4 +9,6 @@ const app = express();
 app.use(express.json());
 app.use("/api/v1/students", studentRouter);
 app.use("/api/v1/course", courseRouter);
-app.use("/api/v1/enrollment", enrollmentRouter);
+app.use("/api/v1", enrollmentRouter);
+
+module.exports = app;
