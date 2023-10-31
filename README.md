@@ -19,8 +19,8 @@ This repository contains a simple Node.js/Express application with MongoDB to ma
 Before getting started, make sure you have the following prerequisites installed:
 - Node.js and npm
 - MongoDB
-- Git (if you're planning to clone/fork the repository)
-
+- Git
+  
 ## Project Setup
 1. Clone or fork this repository.
 2. Navigate to the project directory.
