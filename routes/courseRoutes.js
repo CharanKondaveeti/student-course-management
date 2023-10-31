@@ -8,7 +8,7 @@ router
   .post(courseControllers.createCourse);
 
 router
-  .route("/:tittle")
+  .route("/:id")
   .get(courseControllers.getCourse)
   .patch(courseControllers.updateCourse)
   .delete(courseControllers.deleteCourse);

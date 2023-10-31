@@ -8,7 +8,7 @@ router
   .post(studentController.createStudent);
 
 router
-  .route("/:name")
+  .route("/:id")
   .get(studentController.getStudent)
   .patch(studentController.updateStudent)
   .delete(studentController.deleteStudent);
